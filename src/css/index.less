@@ -1,0 +1,124 @@
+body {
+  background-color: #FFF;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.swiper-pagination {
+  bottom: 170px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 77px !important;
+  height: 10px;
+  border-radius: 0;
+  background-color: #D0D9DD;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #39738E;
+}
+
+.content {
+  width: 1450px;
+  margin: 0 auto;
+  background-color: #FFF;
+  box-shadow: 0 0 60px #555;
+  position: relative;
+  top: -160px;
+  z-index: 10;
+  .navi_list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 19px;
+    font-size: 28px;
+    li {
+      width: 8em;
+      height: 4em;
+      line-height: 4em;
+      text-align: center;
+    }
+  }
+  .page_content {
+    padding: 50px 40px;
+    .content_container {
+      background-color: #EFEFEF;
+      padding: 50px 40px;
+      .content_cell {
+        margin-bottom: 80px;
+      }
+      .intro {
+        .intro_nav_list {
+          width: 60%;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          font-size: 44px;
+          height: 2em;
+          border-bottom: #39738E;
+        }
+        .intro_content {
+          font-size: 20px;
+        }
+      }
+      .show_list_container {
+        .show_title {
+          text-align: center;
+        }
+        .show_list {
+          display: flex;
+          justify-content: space-around;
+          li {
+            flex: 0 0 30%;
+            text-align: center;
+            .show_item {
+              position: relative;
+              width: 100%;
+              img {
+                width: 100%
+              }
+              .show_item_info {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                top: 0;
+                left: 0;
+                background: -webkit-linear-gradient(bottom,#FFF,rgba(0,0,0,0));
+               .show_item_info_text{
+                 position: absolute;
+                 left: 0;
+                 bottom: 0;
+                 text-align: left;
+                 padding: 20px;
+                 .item_name {
+                   font-size: 38px;
+                   border-left: solid 5px #39738E;
+                 }
+                 .item_intro {
+
+                 }
+               }
+              }
+            }
+            .show_item:hover {
+              transform: scale(1.1);
+              transition: all .5s;
+              box-shadow: 0 0 20px #555;
+              .show_item_info {
+                opacity: 1;
+                transition: all .3s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
