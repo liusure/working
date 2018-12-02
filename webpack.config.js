@@ -40,7 +40,7 @@ module.exports = {
                 ]
             }, {
                 test: /\.less/,
-                use: [MiniCssExtractPlugin.loader,"css-loader", "less-loader"]
+                use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader"]
             },
         ]
     },
@@ -53,7 +53,7 @@ module.exports = {
             filename: "[name].css",
             chunkFilename: "staticcss/app.[contenthash:12].css"
         }),
-        // new CleanWebpackPlugin(['dist'])
+        new CleanWebpackPlugin(['dist'])
     ],
     devServer: {
         contentBase: path.join(__dirname, "dist"),
