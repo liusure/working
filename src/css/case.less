@@ -1,0 +1,29 @@
+@import "base";
+.case_list_container{
+  .case_list_header {
+    .item_title {
+      font-size: 28px;
+      color: #FFF;
+      width: 6em;
+      background-color: @base_blue;
+      text-align: center;
+      display: block;
+    }
+    border-bottom: 2px solid @base_blue;
+  }
+  .case_list{
+    .case_ul{
+      .case_li{
+        display: flex;
+        justify-content: space-between;
+        margin: 1em 0;
+        .case_title{
+          flex-grow: 1;
+        }
+        .case_date{
+          flex: 0 0 10em;
+        }
+      }
+    }
+  }
+}
