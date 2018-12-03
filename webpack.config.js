@@ -16,7 +16,7 @@ module.exports = {
         contact: path.join(__dirname, "./src/js/contact.js"),
     },
     output: {
-        filename: '[name].bundle.js'
+        filename: 'static/js/[name].bundle.js'
     },
     module: {
         rules: [
@@ -25,35 +25,19 @@ module.exports = {
                 loader: "url-loader",
                 options: {
                     limit: 10000,
-                    name: path.posix.join('static', 'img/[name].[hash:7].[ext]')
+                    name: path.join('static', 'img/[name].[hash:7].[ext]')
                 }
             },
             {
                 test: /\.js$/,
-                use: {
-                    loader: 'babel-loader'
-                },
+                loader: "babel-loader",
                 exclude: '/node_modules/'
             }, {
                 test: /\.css$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            autoprefixer: true
-                        }
-                    }
-                ]
+                use: [MiniCssExtractPlugin.loader, 'css-loader']
             }, {
                 test: /\.less/,
-                use: [MiniCssExtractPlugin.loader,
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            autoprefixer: true
-                        }
-                    }, "less-loader"]
+                use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader"]
             },
         ]
     },
@@ -62,35 +46,44 @@ module.exports = {
             new OptimizeCSSAssetsPlugin({})
         ]
     },
-    //插件
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/page/index.html",
-            chunks: ["i18n","header","index"],
+            chunks: ["i18n", "header", "index"],
+        }),
+        new HtmlWebpackPlugin({
+            filename: "institution.html",
+            template: "./src/page/institution.html",
+            chunks: ["i18n", "header", "institution"]
         }),
         new HtmlWebpackPlugin({
             filename: "service.html",
             template: "./src/page/service.html",
-            chunks: ["i18n","header","service"]
+            chunks: ["i18n", "header", "service"]
         }),
         new HtmlWebpackPlugin({
             filename: "resource.html",
             template: "./src/page/resource.html",
-            chunks: ["i18n","header","resource"]
+            chunks: ["i18n", "header", "resource"]
         }),
         new HtmlWebpackPlugin({
             filename: "case.html",
             template: "./src/page/case.html",
-            chunks: ["i18n","header","case"]
+            chunks: ["i18n", "header", "case"]
+        }),
+        new HtmlWebpackPlugin({
+            filename: "news.html",
+            template: "./src/page/news.html",
+            chunks: ["i18n", "header", "news"]
         }),
         new HtmlWebpackPlugin({
             filename: "contact.html",
             template: "./src/page/contact.html",
-            chunks: ["i18n","header","contact"]
+            chunks: ["i18n", "header", "contact"]
         }),
         new MiniCssExtractPlugin({
-            filename: "[name].css",
-            chunkFilename: "staticcss/app.[contenthash:12].css"
+            filename: "static/css/[name].css",
+            chunkFilename: "static/css/app.[contenthash:12].css"
         }),
         new CleanWebpackPlugin(['dist'])
     ],
