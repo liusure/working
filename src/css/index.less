@@ -3,18 +3,34 @@
 .intro {
   margin-bottom: 80px;
   .intro_nav_list {
-    width: 60%;
+    max-width: 100%;
+    min-width: 60%;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 44px;
+    font-size: 34px;
     height: 2em;
     border-bottom: @base_blue;
+    li{
+      cursor: pointer;
+    }
+    li.active{
+      border-bottom: 2px solid @base_blue;
+    }
   }
   .intro_content {
     font-size: 20px;
     margin: 50px 0;
+    display: none;
+  }
+  .intro_content.active {
+    display: block;
+    max-height: 300px;
+    overflow: hidden;
+  }
+  .intro_content.active.show_all{
+    max-height: initial;
   }
   .know_more_container {
     position: relative;
@@ -22,7 +38,8 @@
     img {
       width: 100%;
     }
-    .know_more_cube_btn {
+    .know_more_cube_btn.intro_know_more {
+      color: #FFF;
       position: absolute;
       left: 50%;
       top: 50%;
@@ -149,6 +166,9 @@
         border-top: 2px dashed #C5C5C5;
         padding: 20px 0;
         flex: 1 0 auto;
+        overflow: hidden;
+        max-width: 100%;
+        max-height: 50%;
       }
       .news_item_footer {
         display: flex;

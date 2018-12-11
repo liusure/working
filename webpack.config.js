@@ -3,13 +3,15 @@ var path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
     entry: {
         header: path.join(__dirname, "./src/js/header.js"),
+        utils: path.join(__dirname, "./src/js/utils.js"),
+        urls: path.join(__dirname, "./src/js/urls.js"),
         i18n: path.join(__dirname, "./src/js/i18n.js"),
         index: path.join(__dirname, "./src/js/index.js"),
+        institution: path.join(__dirname, "./src/js/institution.js"),
         service: path.join(__dirname, "./src/js/service.js"),
         resource: path.join(__dirname, "./src/js/resource.js"),
         case: path.join(__dirname, "./src/js/case.js"),
@@ -39,11 +41,6 @@ module.exports = {
                 test: /\.less/,
                 use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader"]
             },
-        ]
-    },
-    optimization: {
-        minimizer: [
-            new OptimizeCSSAssetsPlugin({})
         ]
     },
     plugins: [
@@ -92,6 +89,12 @@ module.exports = {
         compress: true,
         port: 9000,
         open: true,
-        inline: true
+        inline: true,
+        proxy:{
+            '/cms': {
+                target: 'http://jfb.zledong.com',
+                changeOrigin: true
+            }
+        }
     }
 }
