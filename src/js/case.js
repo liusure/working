@@ -19,7 +19,8 @@ $(function () {
                     },
                     success: (data) => {
                         pageRender(data);
-                        if (cate.id === cates.items[cates.items.length - 1].id) {
+                        if ($('.case_ul').length === cates.items.length) {
+                            //删掉最后一个横线
                             $('p.gap:last').remove()
                         }
                     }
