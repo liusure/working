@@ -1,1 +1,56 @@
 @import "base";
+
+.content_container{
+  display: flex;
+  .news_item_container {
+    padding: 1em;
+    box-sizing: border-box;
+    position: relative;
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    .news_item_header {
+      flex: 0 0 14em;
+      overflow: hidden;
+      text-align: center;
+      .news_img{
+        width: 100%;
+      }
+    }
+    .news_item_content {
+      margin-top: 1em;
+      flex: 0 0 10em;
+      display: flex;
+      .date {
+        flex: 0 0 3em;
+        height: 3.5em;
+        width: 3em;
+        font-size: 25px;
+        background: url("../assets/img/calander.png") no-repeat 50% 50%;
+        background-size: 100% 100%;
+        text-align: center;
+        line-height: 4.5em;
+      }
+      .new_info {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1em;
+        overflow: hidden;
+        .news_title{
+          font-size: 28px;
+          flex: 0 0 1em;
+        }
+        .news_desc{
+          font-size: 14px;
+        }
+      }
+    }
+    .news_item_bottom{
+      flex: 0 0 1em;
+      .know_more{
+        position: absolute;
+        right: 1em;
+      }
+    }
+  }
+}

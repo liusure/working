@@ -15,7 +15,12 @@ module.exports = {
         service: path.join(__dirname, "./src/js/service.js"),
         resource: path.join(__dirname, "./src/js/resource.js"),
         case: path.join(__dirname, "./src/js/case.js"),
+        news: path.join(__dirname, "./src/js/news.js"),
         contact: path.join(__dirname, "./src/js/contact.js"),
+        newsDetail: path.join(__dirname, "./src/js/newsDetail.js"),
+        caseDetail: path.join(__dirname, "./src/js/caseDetail.js"),
+        institutionList: path.join(__dirname, "./src/js/institutionList.js"),
+        institutionDetail: path.join(__dirname, "./src/js/institutionDetail.js")
     },
     output: {
         filename: 'static/js/[name].bundle.js'
@@ -78,6 +83,26 @@ module.exports = {
             template: "./src/page/contact.html",
             chunks: ["i18n", "header", "contact"]
         }),
+        new HtmlWebpackPlugin({
+            filename: "newsDetail.html",
+            template: "./src/page/newsDetail.html",
+            chunks: ["i18n", "header", "newsDetail"]
+        }),
+        new HtmlWebpackPlugin({
+            filename: "caseDetail.html",
+            template: "./src/page/caseDetail.html",
+            chunks: ["i18n", "header", "caseDetail"]
+        }),
+        new HtmlWebpackPlugin({
+            filename: "institutionList.html",
+            template: "./src/page/institutionList.html",
+            chunks: ["i18n", "header", "institutionList"]
+        }),
+        new HtmlWebpackPlugin({
+            filename: "institutionDetail.html",
+            template: "./src/page/institutionDetail.html",
+            chunks: ["i18n", "header", "institutionDetail"]
+        }),
         new MiniCssExtractPlugin({
             filename: "static/css/[name].css",
             chunkFilename: "static/css/app.[contenthash:12].css"
@@ -90,7 +115,7 @@ module.exports = {
         port: 9000,
         open: true,
         inline: true,
-        proxy:{
+        proxy: {
             '/cms': {
                 target: 'http://jfb.zledong.com',
                 changeOrigin: true

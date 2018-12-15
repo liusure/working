@@ -18,14 +18,14 @@ export default {
     'main': 'http://localhost:9000/cms/api/ajax/main',
     'citys': 'http://localhost:9000/cms/api/ajax/citys',
     'depart': ' http://localhost:9000/cms/api/ajax/depart',
-    'departdetail': ' http://localhost:9000/cms/api/ajax/departdetail?id=1',
+    'departdetail': ' http://localhost:9000/cms/api/ajax/departdetail',
     'about': ' http://localhost:9000/cms/api/ajax/about',
     'partner': 'http://localhost:9000/cms/api/ajax/partner',
-    'news': 'http://localhost:9000/cms/api/ajax/news?pageno=1&pagesize=10',
-    'newsdetail': 'http://localhost:9000/cms/api/ajax/newsdetail?id=1',
+    'news': 'http://localhost:9000/cms/api/ajax/news',
+    'newsdetail': 'http://localhost:9000/cms/api/ajax/newsdetail',
     'lawyers': 'http://localhost:9000/cms/api/ajax/lawyers',
     'lawyerdetail ': 'http://localhost:9000/cms/api/ajax/lawyerdetail?id=1',
     'casecate': 'http://localhost:9000/cms/api/ajax/casecate',
     'cases': 'http://localhost:9000/cms/api/ajax/cases',
-    'casedetail': ' http://localhost:9000/cms/api/ajax/casedetail?id=1'
+    'casedetail': ' http://localhost:9000/cms/api/ajax/casedetail'
 }

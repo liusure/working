@@ -38,9 +38,11 @@ function pageRender(data) {
     items.forEach((item) => {
         let date = new moment(item.createTime).format('YYYY-MM-DD');
         let li = $(`<li class="case_li">
+                        <a class="case_a" href="caseDetail.html?id=${item.id}">
                             <div class="case_title">${item.name}</div>
                             <div class="case_date">${date}</div>
-                        </li>`);
+                        </a>
+                    </li>`);
         ul.append(li);
     })
     case_list.append(ul).append(p);
