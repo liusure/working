@@ -106,7 +106,7 @@ function pageRender(data) {
     _.forEach(news, (newsItem) => {
         let date = new moment(newsItem.updateTime).format('YYYY-MM-DD');
         console.log(date)
-        let news_item = $(`<div class="news_item"><div class="news_item_title"> ${newsItem.name}</div><div class="news_item_text"> ${newsItem.extensionProfile}</div><div class="news_item_footer"><span class="date">${date}</span><span class="know_more">查看详情></span></div>`);
+        let news_item = $(`<div class="news_item"><div class="news_item_title"> ${newsItem.name}</div><div class="news_item_text"> ${newsItem.extensionProfile}</div><div class="news_item_footer"><span class="date">${date}</span><a href="newsDetail.html?id=${newsItem.id}" class="know_more">查看详情></a></div>`);
         news_content.append(news_item)
     })
 }

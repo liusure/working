@@ -39,7 +39,11 @@ function pageRender(data) {
                 </div>
                 <div><p>从业经历：${item.workHistory}</p></div>
                 <p class="gap"></p>
-                <div class="lawyer_content">${item.contentDesc}</div>
+                <div class="lawyer_content">简介：<br/>${item.contentDesc}</div>
+                                <p class="gap"></p>
+                <div class="lawyer_content">社会职务：<br/>${item.socialFunction}</div>
+                                <p class="gap"></p>
+                <div class="lawyer_content">出版作品：<br/>${item.production}</div>
             </div>
         `)
     content_container.append(ele);

@@ -1,11 +1,17 @@
 import DI18n from 'di18n-translate'
 
 const di18n = new DI18n({
-    locale: 'zh',
+    locale: "zh",
     isReplace: true,
     messages: {
         en: {
-            你好: 'Hello'
+            首页: "index",
+            区域机构: "institution",
+            专业资源: "resource",
+            服务内容: "service",
+            经典案例: "case",
+            新闻中心: "news",
+            联系我们: "about"
         },
         zh: {
             首页: "首页",
@@ -18,3 +24,5 @@ const di18n = new DI18n({
         }
     }
 })
+
+export default di18n;

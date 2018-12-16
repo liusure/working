@@ -1,4 +1,5 @@
 import '../css/case.less'
+import '../assets/static/iconfont.css'
 import $ from 'jquery'
 import _ from 'lodash'
 import moment from 'moment'
@@ -39,6 +40,7 @@ function pageRender(data) {
         let date = new moment(item.createTime).format('YYYY-MM-DD');
         let li = $(`<li class="case_li">
                         <a class="case_a" href="caseDetail.html?id=${item.id}">
+                            <i class="iconfont icon-file"></i>
                             <div class="case_title">${item.name}</div>
                             <div class="case_date">${date}</div>
                         </a>

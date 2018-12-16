@@ -4,8 +4,10 @@ import _ from 'lodash'
 import moment from 'moment'
 import urls from './urls'
 import {request} from './utils'
+import qs from 'qs'
 
 $(function () {
+
     request({
         url: urls.depart,
         success: (data) => {
