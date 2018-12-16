@@ -28,7 +28,7 @@ function pageRender(data) {
         let ele = $(`
             <div class="news_item_container">
                 <div class="news_item_header">
-                    <img class="news_img" src="${item.picUrl}" alt="">
+                    <a href="newsDetail.html?id=${item.id}"><img class="news_img" src="${item.picUrl}" alt=""></a>
                 </div>
                 <div class="news_item_content">
                     <div class="date">${date}</div>

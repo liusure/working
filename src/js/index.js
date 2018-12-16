@@ -81,7 +81,7 @@ function pageRender(data) {
     })
     _.forEach(lawyers, (lawyerItem) => {
         let item = $(`<li>
-                        <div class="show_item">
+                        <a href="lawyerDetail.html?id=${lawyerItem.id}" class="show_item">
                             <img src="${lawyerItem.picUrl}" alt="">
                             <div class="show_item_info">
                                 <div class="show_item_info_text">
@@ -93,7 +93,7 @@ function pageRender(data) {
                                     <div class="know_more"></div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </li>`)
         show_list.append(item);
     })

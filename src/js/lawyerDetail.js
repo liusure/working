@@ -26,7 +26,7 @@ function pageRender(data) {
 <div class="lawyer_detail_container">
                 <div class="lawyer_base_info">
                     <div class="lawyer_img_container">
-                        <img class="lawyer_img" src="http://jfb.zledong.com/jmedias/img/584/1542796643420.jpg" alt="">
+                        <img class="lawyer_img" src="${item.picUrl}" alt="">
                     </div>
                     <div class="lawyer_base_info_content">
                         <h1 class="lawyer_title">${item.name}</h1>
