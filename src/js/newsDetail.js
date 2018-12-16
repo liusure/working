@@ -27,7 +27,7 @@ function pageRender(data) {
             <div class="news_detail_container">
                 <h1 class="news_title">${item.name}</h1>
                 <div class="news_date">${date}</div>
-                <div class="new_content">${item.content}</div>
+                <div class="news_content">${item.content}</div>
             </div>
         `)
 

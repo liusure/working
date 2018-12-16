@@ -1,0 +1,25 @@
+@import "base";
+
+.content_container {
+  .lawyer_detail_container {
+    width: 100%;
+    .lawyer_base_info {
+      display: flex;
+      .lawyer_img_container {
+        flex: 0 0 30%;
+        .lawyer_img {
+          width: 100%;
+        }
+      }
+      .lawyer_base_info_content {
+        flex-grow: 1;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        .lawyer_base_info_context{
+          line-height: 3em;
+        }
+      }
+    }
+  }
+}

@@ -32,7 +32,7 @@ function pageRender(data) {
                 </div>
                 <div class="news_item_content">
                     <div class="date">${date}</div>
-                    <div class="new_info">
+                    <div class="news_info">
                         <div class="news_title">${item.name}</div>
                         <div class="news_desc">${item.extensionProfile}</div>
                     </div>

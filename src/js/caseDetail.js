@@ -27,7 +27,7 @@ function pageRender(data) {
             <div class="case_detail_container">
                 <h1 class="news_title">${item.name}</h1>
                 <div class="case_date">${date}</div>
-                <div class="new_content">${item.contentDesc}</div>
+                <div class="news_content">${item.contentDesc}</div>
             </div>
         `)
     content_container.append(ele);

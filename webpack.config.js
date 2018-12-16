@@ -20,7 +20,8 @@ module.exports = {
         newsDetail: path.join(__dirname, "./src/js/newsDetail.js"),
         caseDetail: path.join(__dirname, "./src/js/caseDetail.js"),
         institutionList: path.join(__dirname, "./src/js/institutionList.js"),
-        institutionDetail: path.join(__dirname, "./src/js/institutionDetail.js")
+        institutionDetail: path.join(__dirname, "./src/js/institutionDetail.js"),
+        lawyerDetail: path.join(__dirname, "./src/js/lawyerDetail.js")
     },
     output: {
         filename: 'static/js/[name].bundle.js'
@@ -102,6 +103,11 @@ module.exports = {
             filename: "institutionDetail.html",
             template: "./src/page/institutionDetail.html",
             chunks: ["i18n", "header", "institutionDetail"]
+        }),
+        new HtmlWebpackPlugin({
+            filename: "lawyerDetail.html",
+            template: "./src/page/lawyerDetail.html",
+            chunks: ["i18n", "header", "lawyerDetail"]
         }),
         new MiniCssExtractPlugin({
             filename: "static/css/[name].css",

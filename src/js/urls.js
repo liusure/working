@@ -24,7 +24,7 @@ export default {
     'news': 'http://localhost:9000/cms/api/ajax/news',
     'newsdetail': 'http://localhost:9000/cms/api/ajax/newsdetail',
     'lawyers': 'http://localhost:9000/cms/api/ajax/lawyers',
-    'lawyerdetail ': 'http://localhost:9000/cms/api/ajax/lawyerdetail?id=1',
+    'lawyerdetail': 'http://localhost:9000/cms/api/ajax/lawyerdetail',
     'casecate': 'http://localhost:9000/cms/api/ajax/casecate',
     'cases': 'http://localhost:9000/cms/api/ajax/cases',
     'casedetail': ' http://localhost:9000/cms/api/ajax/casedetail'

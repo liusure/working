@@ -25,7 +25,7 @@ function pageRender(data) {
     let resource_content_list = $('.resource_content_list');
     resource_content_list.html("");
     _.forEach(items, (item) => {
-        let ele = $(`<div class="list_item">
+        let ele = $(`<a href="lawyerDetail.html?id=${item.id}" class="list_item">
                             <div class="item_header">
                                 <img src="${item.picUrl}" alt="">
                             </div>
@@ -37,7 +37,9 @@ function pageRender(data) {
                                     <p>工作经历：${item.workHistory}</p>
                                 </div>
                             </div>
-                        </div>`)
+                        </a>
+            <p class="gap"></p>
+`)
         resource_content_list.append(ele);
     })
 }
