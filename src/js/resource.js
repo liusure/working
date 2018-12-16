@@ -1,10 +1,13 @@
 import '../css/resource.less'
+import '../css/myPagination.css'
 import $ from 'jquery'
 import _ from 'lodash'
 import moment from 'moment'
 import urls from './urls'
 import {request} from './utils'
+import Page from "./myPagination"
 
+let type = 1;
 $(function () {
     request({
         url: urls.lawyers,
@@ -12,14 +15,14 @@ $(function () {
             pageno: 1,
             pagesize: 10,
             city: "",
-            lawyer: 1
+            lawyer: type
         },
         success: (data) => {
-            pageRender(data)
+            pageRender(data,1)
         }
     })
 })
-function pageRender(data) {
+function pageRender(data,page) {
     let items = data.items;
     let resource_content = $('.resource_content');
     let resource_content_list = $('.resource_content_list');
@@ -42,6 +45,27 @@ function pageRender(data) {
 `)
         resource_content_list.append(ele);
     })
+    new Page({
+        id: 'pagination',
+        curPage: page, //初始页码
+        pageTotal: data.pageCount, //总页数
+        dataTotal: 11, //总共多少条数据
+        pageAmount: 10, //每页多少条
+        getPage: function (page) {
+            request({
+                url: urls.lawyers,
+                data: {
+                    pageno: page,
+                    pagesize: 10,
+                    city: "",
+                    lawyer: type
+                },
+                success: (data) => {
+                    pageRender(data,page)
+                }
+            })
+        }
+    })
 }
 let tab_group = $('.tab_group');
 tab_group.on('click', 'li', (e) => {
@@ -50,16 +74,17 @@ tab_group.on('click', 'li', (e) => {
         e.classList.remove("active");
     })
     e.currentTarget.classList.add('active');
+    type = e.currentTarget.dataset.type;
     request({
         url: urls.lawyers,
         data: {
             pageno: 1,
             pagesize: 10,
             city: "",
-            lawyer: e.currentTarget.dataset.type
+            lawyer: type
         },
         success: (data) => {
-            pageRender(data)
+            pageRender(data,1)
         }
     })
 })
