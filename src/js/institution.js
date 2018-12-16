@@ -27,6 +27,9 @@ function initMap() {
             basicColor: "#8F8F8F",
             hoverColor: "#818181",
             clickColor: "#818181"
+        },
+        clickCallback: (id, name) => {
+            window.location.href = "institutionList.html"
         }
     });
 }
