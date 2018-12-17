@@ -15,6 +15,7 @@ $(function () {
 
     $('.i18n_toggle').on('click', (e) => {
         let loc = e.currentTarget.dataset.loc;
+      window.localStorage.jfblocale =  loc;
         di18n.setLocale(loc, function () {
             // 回调函数
         })

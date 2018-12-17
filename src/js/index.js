@@ -76,6 +76,9 @@ function pageRender(data) {
             <div class="case_item_content">
             ${buscasesItem.extensionProfile}
             </div>
+            <div class="case_item_footer">
+            <a href="caseDetail.html?id=${buscasesItem.id}" class="case_know_more">详细内容>></a>
+            </div>
         </div>`)
         classic_case_content.append(item);
     })
