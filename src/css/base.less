@@ -37,10 +37,14 @@ ul {
 
 @shadow: #D2D1D1;
 
+@big_title_size: 34px;
+@title_size: 24px;
+@content_size: 14px;
+
 
 .swiper-container {
   width: 100%;
-  height: 910px;
+  height: 890px;
   .swiper-slide{
     text-align: center;
   }
@@ -92,17 +96,18 @@ ul {
   background-color: #FFF;
   box-shadow: 0 0 160px @shadow;
   position: relative;
-  top: -160px;
+  top: (-4*@title_size);
   z-index: 10;
   .navi_list {
     display: flex;
     list-style: none;
     align-items: center;
     justify-content: space-around;
-    padding-top: 19px;
-    font-size: 28px;
+    font-size: @title_size;
     border-bottom: 1px solid #DFDFDF;
+    margin: 0;
     li {
+      box-sizing: border-box;
       width: 8em;
       height: 4em;
       line-height: 4em;
