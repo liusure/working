@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: @big_title_size;
+    font-size: @biggest_title_size;
     height: 2em;
     border-bottom: @base_blue;
     li{
@@ -25,10 +25,11 @@
     font-size: @content_size;
     margin: 50px 0;
     display: none;
+    line-height: @text_line_height;
   }
   .intro_content.active {
     display: block;
-    max-height: 300px;
+    max-height: 200px;
     overflow: hidden;
   }
   .intro_content.active.show_all{
@@ -46,15 +47,18 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      font-size: @title_size;
+      font-size: @nav_bar_size;
     }
   }
 }
 
 .show_list_container {
   width: 100%;
+  text-align: center;
   .show_title {
-    text-align: center;
+    font-size: @main_title_size;
+    display: inline-block;
+    margin-bottom: 80px;
   }
   .show_list {
     display: flex;
@@ -84,7 +88,8 @@
             text-align: left;
             padding: 20px;
             .item_name {
-              font-size: @big_title_size;
+              padding-left: .5em;
+              font-size: @biggest_title_size;
               border-left: solid 5px @base_blue;
             }
             .item_intro {
@@ -117,23 +122,26 @@
   .classic_case_content {
     padding-bottom: 100px;
     .classic_case_content_item {
-      border: 3px solid @lighting_blue;
-      padding: 70px 80px;
-      margin: 100px auto;
-      width: 70%;
+      box-sizing: border-box;
+      border: 2px solid @lighting_blue;
+      padding: 40px;
+      margin: 40px auto;
+      width: @view_port_width;
       .case_item_title {
-        font-size: 26px;
+        font-size: @bigger_title_size;
         color: @base_blue;
         border-left: 4px solid @base_blue;
         padding: 0 .5em;
-        margin: .5em 0;
+        margin: 1em 0;
       }
       .case_item_content {
-        font-size: 20px;
+        font-size: 13px;
+        line-height: @text_line_height;
       }
       .case_item_footer{
+        height: 1em;
       .case_know_more{
-        font-size: 22px;
+        font-size: @know_more_size;
         color: @base_blue;
         float: right;
       }
@@ -147,51 +155,52 @@
   text-align: center;
   padding: 100px 0;
   .news_content_title {
-    font-size: @big_title_size;
+    font-size: @main_title_size;
     margin: 0 auto;
     display: inline-block;
-    border-bottom: 3px solid @base_blue;
   }
   .news_content {
     margin: 0 auto;
-    width: 80%;
+    width: @view_port_width;
     padding: 70px 80px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     .news_item {
       text-align: left;
-      flex: 0 0 370px;
-      height: 370px;
-      margin: 50px 0;
-      box-shadow: 10px 10px 50px @shadow;
-      padding: 40px;
+      flex: 0 0 280px;
+      height: 280px;
+      margin: 20px 0;
+      box-shadow: 10px 10px 30px @shadow;
+      padding: 15px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       .news_item_title {
-        font-size: @title_size;
+        font-size: @bigger_title_size;
         color: @base_blue;
-        margin-bottom: 20px;
+        margin: 20px 0;
         flex: 0 0 1em;
       }
       .news_item_text {
+        font-size: @content_size;
         border-top: 2px dashed #C5C5C5;
         padding: 20px 0;
         flex: 1 0 auto;
         overflow: hidden;
         max-width: 100%;
         max-height: 50%;
+        line-height: @text_line_height;
       }
       .news_item_footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex: 0 0 3em;
-        font-size: 23px;
-        line-height: 23px;
+        font-size: @common_title_size;
+        line-height: @common_title_size;
         .date {
-          font-size: 18px;
+          font-size: @common_title_size;
         }
         .know_more {
           color: @base_blue;
@@ -207,10 +216,9 @@
     background-color: @back_gray;
     text-align: center;
     .partner_title {
-      font-size: @big_title_size;
+      font-size: @main_title_size;
       margin: 0 auto;
       display: inline-block;
-      border-bottom: 3px solid @base_blue;
     }
     .partner_list {
       padding: 60px 0;

@@ -8,10 +8,13 @@
       align-items: center;
       .tab_li{
         .tab_item{
-          font-size: @title_size;
+          font-size: @biggest_tab_size;
+          font-weight: bold;
+          cursor: pointer;
         }
       }
       .tab_li.active{
+        color: @base_blue;
         border-bottom: 2px solid @base_blue;
       }
     }
@@ -20,7 +23,7 @@
     margin-top: 100px;
     .resource_list_header {
       .item_title {
-        font-size: @title_size;
+        font-size: @biggest_tab_size;
         color: #FFF;
         width: 6em;
         background-color: @base_blue;
@@ -35,9 +38,9 @@
         justify-content: space-between;
         padding: 60px 0;
         .item_header{
-          flex: 0 0 360px;
+          flex: 0 0 260px;
           img{
-            width: 360px;
+            width: 260px;
           }
         }
         .item_content{
@@ -46,7 +49,9 @@
           flex-grow: 1;
           padding: 20px 60px;
           .item_content_name{
-            font-size: @title_size;
+            font-size: @biggest_title_size;
+            font-weight: bold;
+            margin-bottom: 1em;
           }
           .item_content_info{
 

@@ -4,20 +4,20 @@ import $ from "jquery"
 import di18n from './i18n'
 
 $(function () {
-    var mySwiper = new swiper('.swiper-container', {
-        loop: true,
-        autoplay: true,
-        pagination: {
-            el: '.swiper-pagination'
-        },
-    })
+  var mySwiper = new swiper('.swiper-container', {
+/*    loop: true,
+    autoplay: true,*/
+    pagination: {
+      el: '.swiper-pagination'
+    },
+  })
 
 
-    $('.i18n_toggle').on('click', (e) => {
-        let loc = e.currentTarget.dataset.loc;
-      window.localStorage.jfblocale =  loc;
-        di18n.setLocale(loc, function () {
-            // 回调函数
-        })
+  $('.i18n_toggle').on('click', (e) => {
+    let loc = e.currentTarget.dataset.loc;
+    window.localStorage.jfblocale = loc;
+    di18n.setLocale(loc, function () {
+      // 回调函数
     })
+  })
 })

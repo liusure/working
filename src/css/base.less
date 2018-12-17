@@ -1,29 +1,30 @@
 a:link {
-  color: initial;
   text-decoration: none
 }
 
 /* 未访问的链接 */
 a:visited {
-  color: initial;
   text-decoration: none
 }
 
 /* 已访问的链接 */
 a:hover {
-  color: initial;
   text-decoration: none
 }
 
 /* 鼠标移动到链接上 */
 a:active {
-  color: initial;
   text-decoration: none
+}
+
+a {
+  color: @font_color;
 }
 
 /* 选定的链接 */
 body {
   background-color: #FFF;
+  overflow-x: hidden;
 }
 
 ul {
@@ -31,29 +32,44 @@ ul {
   padding: 0;
 }
 
+@font_color: #333333;
+
 @back_gray: #efefef;
 @base_blue: #0A5373;
 @lighting_blue: #6A93A5;
 
 @shadow: #D2D1D1;
 
-@big_title_size: 34px;
-@title_size: 24px;
-@content_size: 14px;
-
-
+@biggest_tab_size: 20px;
+@main_title_size: 24px;
+@biggest_title_size: 18px;
+@bigger_title_size: 16px;
+@common_title_size: 14px;
+@nav_bar_size: 14px;
+@know_more_size: 14px;
+@content_size: 12px;
+@view_port_width: 1160px;
+@text_line_height: 160%;
 .swiper-container {
   width: 100%;
-  height: 890px;
-  .swiper-slide{
-    text-align: center;
+  .swiper-slide {
+    height: 560px;
+    .swiper-item {
+      width: 100%;
+      height: 560px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
-  .i18n_container{
+  .i18n_container {
     z-index: 999;
     position: absolute;
     top: 3em;
     right: 5em;
-    .i18n_toggle{
+    .i18n_toggle {
       cursor: pointer;
       width: 3em;
       text-align: center;
@@ -63,7 +79,7 @@ ul {
 }
 
 .swiper-pagination {
-  bottom: 170px !important;
+  bottom: 100px !important;
 }
 
 .swiper-pagination-bullet {
@@ -91,19 +107,19 @@ ul {
 }
 
 #content {
-  width: 1450px;
+  width: @view_port_width;
   margin: 0 auto;
   background-color: #FFF;
   box-shadow: 0 0 160px @shadow;
   position: relative;
-  top: (-4*@title_size);
+  top: (-4*@nav_bar_size);
   z-index: 10;
   .navi_list {
     display: flex;
     list-style: none;
     align-items: center;
     justify-content: space-around;
-    font-size: @title_size;
+    font-size: @nav_bar_size;
     border-bottom: 1px solid #DFDFDF;
     margin: 0;
     li {
@@ -112,9 +128,22 @@ ul {
       height: 4em;
       line-height: 4em;
       text-align: center;
+      position: relative;
     }
     li.active {
-      border-bottom: 3px solid @base_blue;
+      a {
+        color: @base_blue !important;
+      }
+    }
+    li.active:after {
+      content: '';
+      width: 2em;
+      display: inline-block;
+      border-bottom: 2px solid #0A5373;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      bottom: 0;
     }
   }
   .page_content {
@@ -130,4 +159,19 @@ ul {
 
 p.gap {
   border-bottom: 2px solid #999;
+}
+
+.under_line {
+  position: relative;
+}
+
+.under_line:after {
+  content: '';
+  width: 2em;
+  display: inline-block;
+  border-bottom: 2px solid #0A5373;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -.6em;
 }

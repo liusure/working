@@ -1,36 +1,38 @@
 @import "base";
-.content_container{
-  .service_container{
+
+.content_container {
+  .service_container {
     width: 100%;
-    .tab_group_container{
-      .tab_group{
+    .tab_group_container {
+      .tab_group {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        .tab_li{
+        .tab_li {
           cursor: pointer;
-          .tab_item{
-            font-size: @title_size;
+          .tab_item {
+            font-size: @biggest_tab_size;
           }
         }
-        .tab_li.active{
+        .tab_li.active {
+          color: @base_blue;
           border-bottom: 2px solid @base_blue;
         }
       }
     }
-    .service_content{
+    .service_content {
       margin-top: 100px;
-      .service_content_text{
+      .service_content_text {
         display: none;
       }
-      .service_content_text.active{
+      .service_content_text.active {
         display: block;
       }
     }
   }
-  .image_container{
+  .image_container {
     width: 100%;
-    img{
+    img {
       width: 100%;
     }
   }

@@ -7,22 +7,52 @@ import {request} from './utils'
 import qs from 'qs'
 
 $(function () {
-
-    request({
-        url: urls.depart,
-        success: (data) => {
+  let {city} = qs.parse(window.location.href.split('?')[1]);
+  request({
+    url: urls.citys,
+    data: {
+      city: city || ''
+    },
+    success: (data) => {
+      let {citys} = data;
+      let city_list = $('.city_list');
+      city_list.empty();
+      city_list.append($(`<div class="city_item">全部</div>`))
+      _.forEach(citys, (city) => {
+        city_list.append($(`<div class="city_item" data-city="${city}">${city}</div>`))
+      })
+      $('.city_item').on('click', (e) => {
+        request({
+          url: urls.depart,
+          data: {
+            city: e.currentTarget.dataset.city || ''
+          },
+          success: (data) => {
             pageRender(data)
-        }
-    })
+          }
+        })
+      })
+    }
+  })
+  request({
+    url: urls.depart,
+    data: {
+      city: city || ''
+    },
+    success: (data) => {
+      pageRender(data)
+    }
+  })
 })
 
 function pageRender(data) {
-    let items = data.items;
-    let content_container = $('.content_container');
-    let institution_list_container = $('.institution_list_container');
-    _.forEach(items, (item) => {
-        let date = new moment(item.updateTime).format('MM');
-        let ele = $(`
+  let {citys, items} = data;
+  let content_container = $('.content_container');
+  let institution_list_container = $('.institution_list_container');
+  institution_list_container.empty();
+  _.forEach(items, (item) => {
+    let date = new moment(item.updateTime).format('MM');
+    let ele = $(`
                 <p class="gap"></p>
             <div class="institution_item">
                     <div class="institution_img_container">
@@ -31,7 +61,7 @@ function pageRender(data) {
                     <div class="institution_info">
                         <div class="institution_name">${item.name}</div>
                         <div class="institution_decs">
-                        ${item.remark}
+                        <div class="remark">${item.remark}</div>
                             <p>地址：${item.address}</p>
                             <p>电话：${item.phoneNum}</p>
                             <p>email：${item.email}</p>
@@ -42,6 +72,7 @@ function pageRender(data) {
                     </div>
                 </div>
         `)
-        institution_list_container.append(ele);
-    })
+    institution_list_container.append(ele);
+  })
+
 }

@@ -4,7 +4,7 @@
   .city_container {
     width: 100%;
     .city_container_header {
-      font-size: @title_size;
+      font-size: @biggest_tab_size;
       color: #FFF;
       width: 6em;
       background-color: @base_blue;
@@ -38,13 +38,21 @@
         display: flex;
         flex-direction: column;
         .institution_name{
-          font-size: @title_size;
+          font-size: @biggest_title_size;
+          font-weight: bold;
+        }
+        .institution_decs{
+          line-height: @text_line_height;
+          .remark{
+            max-height: 200px;
+            overflow: hidden;
+          }
         }
         .institution_footer{
           width: 100%;
           .know_more{
             float: right;
-            font-size: 22px;
+            font-size: @know_more_size;
           }
         }
       }

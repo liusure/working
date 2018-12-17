@@ -7,19 +7,22 @@ import urls from './urls'
 import {request} from './utils'
 
 $(function () {
-    request({
-        url: urls.depart,
-        success: (data) => {
-            pageRender(data)
-        }
-    })
+  request({
+    url: urls.depart,
+    data: {
+      city: ''
+    },
+    success: (data) => {
+      pageRender(data)
+    }
+  })
 })
 
 function pageRender(data) {
-    let items = data.items;
-    let content_container = $('.content_container');
-    _.forEach(items, (item) => {
-        let ele = $(`<div class="contact_item">
+  let items = data.items;
+  let content_container = $('.content_container');
+  _.forEach(items, (item) => {
+    let ele = $(`<div class="contact_item">
                 <div class="contact_item_header">
                     <span class="item_title">${item.name}</span>
                 </div>
@@ -31,6 +34,6 @@ function pageRender(data) {
                 </div>
             </div>
 `)
-        content_container.append(ele);
-    })
+    content_container.append(ele);
+  })
 }
