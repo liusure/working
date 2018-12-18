@@ -1,37 +1,69 @@
 @import "base";
-.case_list_container{
-  width: 100%;
-  .case_list_header {
-    .item_title {
-      font-size: @biggest_tab_size;
-      color: #FFF;
-      width: 6em;
-      background-color: @base_blue;
-      text-align: center;
-      display: block;
-    }
-    border-bottom: 2px solid @base_blue;
-  }
-  .case_list{
-    .case_ul{
-      .case_a{
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        margin: 1em 0;
-        .case_title{
-          flex-grow: 1;
-        }
-        .case_date{
-          flex: 0 0 10em;
+
+.content_container {
+  .case_container {
+    width: 100%;
+
+    .cate_container {
+      width: 100%;
+      .cate_container_header {
+        font-size: @biggest_tab_size;
+        color: #FFF;
+        width: 6em;
+        background-color: @base_blue;
+        text-align: center;
+        display: block;
+      }
+      .cate_list {
+        background-color: #FFF;
+        width: 100%;
+        margin-bottom: 50px;
+        .cate_item {
+          width: 20%;
           text-align: center;
+          display: inline-block;
+          height: 3em;
+          line-height: 3em;
+          cursor: pointer;
+          position: relative;
+        }
+        .cate_item.active:after {
+          content: '';
+          width: 2em;
+          display: inline-block;
+          border-bottom: 2px solid @base_blue;
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%);
+          bottom: 0;
         }
       }
     }
-  }
-  .iconfont{
-    font-size: 18px;
-    margin: 0 10px;
-    vertical-align: middle;
+    .case_list {
+      width: 100%;
+      .case_ul {
+        .case_a {
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          margin: 1em 0;
+          .case_title {
+            flex-grow: 1;
+          }
+          .case_date {
+            flex: 0 0 10em;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .iconfont {
+      font-size: 18px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+    .pagination {
+      float: right;
+    }
   }
 }

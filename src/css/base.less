@@ -72,15 +72,19 @@ ul {
     .i18n_container {
       z-index: 999;
       position: absolute;
-      top: 3em;
-      right: 0;
+      top: 15px;
+      right: 10px;
       .i18n_toggle {
+        line-height: @text_line_height;
         cursor: pointer;
         width: 3em;
         text-align: center;
         display: inline-block;
         font-size: @content_size;
         margin: 1em 0;
+      }
+      .i18n_toggle.active {
+        text-decoration: underline;
       }
       .inner_work_zone {
         color: @base_blue;
@@ -91,8 +95,8 @@ ul {
     .logo_container {
       z-index: 999;
       position: absolute;
-      top: 3em;
-      left: 0;
+      top: 15px;
+      left: 10px;
       width: 268px;
       height: 63px;
       img {
@@ -119,18 +123,32 @@ ul {
   background-color: @base_blue;
 }
 
-.copyright {
-  background-color: #FFF;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  .license {
-    color: #000;
-  }
-  .mobile {
-
+.page_footer {
+  text-align: center;
+  .copyright {
+    font-size: @content_size;
+    margin: 0 auto;
+    width: @view_port_width;
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .license {
+      color: #000;
+      text-align: left;
+    }
+    .mobile {
+      display: flex;
+      align-items: center;
+      .phone_icon {
+        width: 34px;
+        height: 34px;
+        margin: 10px;
+      }
+    }
   }
 }
+
 
 #content {
   width: @view_port_width;
@@ -173,10 +191,10 @@ ul {
     }
   }
   .page_content {
-    padding: 50px 40px;
+    padding: 40px 30px;
     .content_container {
       background-color: @back_gray;
-      padding: 50px 40px;
+      padding: 40px 30px;
       display: flex;
       flex-wrap: wrap;
     }

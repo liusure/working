@@ -1,25 +1,58 @@
 @import "base";
-.resource_container{
+
+.resource_container {
   width: 100%;
-  .tab_group_container{
-    .tab_group{
+  .city_container_header {
+    font-size: @biggest_tab_size;
+    color: #FFF;
+    width: 6em;
+    background-color: @base_blue;
+    text-align: center;
+    display: block;
+  }
+  .city_list {
+    background-color: #FFF;
+    width: 100%;
+    margin-bottom: 50px;
+    .city_item {
+      width: 20%;
+      text-align: center;
+      display: inline-block;
+      height: 3em;
+      line-height: 3em;
+      cursor: pointer;
+      position: relative;
+    }
+    .city_item.active:after {
+      content: '';
+      width: 2em;
+      display: inline-block;
+      border-bottom: 2px solid @base_blue;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      bottom: 0;
+    }
+  }
+  .tab_group_container {
+    .tab_group {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      .tab_li{
-        .tab_item{
+      .tab_li {
+        .tab_item {
           font-size: @biggest_tab_size;
           font-weight: bold;
           cursor: pointer;
         }
       }
-      .tab_li.active{
+      .tab_li.active {
         color: @base_blue;
         border-bottom: 2px solid @base_blue;
       }
     }
   }
-  .resource_content{
+  .resource_content {
     margin-top: 100px;
     .resource_list_header {
       .item_title {
@@ -32,34 +65,35 @@
       }
       border-bottom: 2px solid @base_blue;
     }
-    .resource_content_list{
-      .list_item{
+    .resource_content_list {
+      .list_item {
         display: flex;
         justify-content: space-between;
         padding: 60px 0;
-        .item_header{
-          flex: 0 0 260px;
-          img{
-            width: 260px;
+        .item_header {
+          flex: 0 0 242px;
+          img {
+            width: 242px;
+            height: 334px;
           }
         }
-        .item_content{
+        .item_content {
           display: flex;
           flex-direction: column;
           flex-grow: 1;
           padding: 20px 60px;
-          .item_content_name{
+          .item_content_name {
             font-size: @biggest_title_size;
             font-weight: bold;
             margin-bottom: 1em;
           }
-          .item_content_info{
+          .item_content_info {
 
           }
         }
       }
     }
-    .pagination{
+    .pagination {
       float: right;
     }
   }

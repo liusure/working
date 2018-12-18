@@ -17,11 +17,15 @@ $(function () {
       let {citys} = data;
       let city_list = $('.city_list');
       city_list.empty();
-      city_list.append($(`<div class="city_item">全部</div>`))
+      city_list.append($(`<div class="city_item active">全部</div>`))
       _.forEach(citys, (city) => {
         city_list.append($(`<div class="city_item" data-city="${city}">${city}</div>`))
       })
       $('.city_item').on('click', (e) => {
+        $('.city_item').each((i, e) => {
+          e.classList.remove("active");
+        })
+        e.currentTarget.classList.add("active");
         request({
           url: urls.depart,
           data: {

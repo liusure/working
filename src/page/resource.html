@@ -1,95 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>index</title>
+  <meta charset="UTF-8">
+  <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
 <div class="swiper-container">
-    <div class="page_header">
-        <div class="logo_container">
-            <img src="${require('../assets/img/logo.png')}">
-        </div>
-        <div class="logo_container"><img src="${require('../assets/img/logo.png')}"></div>
-        <div class="i18n_container">
-            <div><span class="i18n_toggle" data-loc="en">EN</span>|<span class="i18n_toggle" data-loc="zh">中文</span>
-            </div>
-            <!--<div class="inner_work_zone">内部工作区</div>-->
-        </div>
+  <div class="page_header">
+    <div class="logo_container">
+      <img src="${require('../assets/img/logo.png')}">
     </div>
-    <div class="swiper-wrapper">
-        <div class="swiper-slide"><div class="swiper-item">             <img src="${ require('../assets/img/header.jpg') }" style="height:560px" alt="">           </div></div>
-        <div class="swiper-slide"><div class="swiper-item">             <img src="${ require('../assets/img/header.jpg') }" style="height:560px" alt="">           </div></div>
-        <div class="swiper-slide"><div class="swiper-item">             <img src="${ require('../assets/img/header.jpg') }" style="height:560px" alt="">           </div></div>
+    <div class="i18n_container">
+      <div><span class="i18n_toggle" data-loc="en">EN</span>|<span class="i18n_toggle" data-loc="zh">中文</span>
+      </div>
+      <!--<div class="inner_work_zone">内部工作区</div>-->
     </div>
-    <!-- 分页器 -->
-    <div class="swiper-pagination"></div>
+  </div>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <div class="swiper-item"><img src="${ require('../assets/img/header.jpg') }" style="height:560px" alt=""></div>
+    </div>
+    <div class="swiper-slide">
+      <div class="swiper-item"><img src="${ require('../assets/img/header.jpg') }" style="height:560px" alt=""></div>
+    </div>
+    <div class="swiper-slide">
+      <div class="swiper-item"><img src="${ require('../assets/img/header.jpg') }" style="height:560px" alt=""></div>
+    </div>
+  </div>
+  <!-- 分页器 -->
+  <div class="swiper-pagination"></div>
 </div>
 <div id="content">
-    <ul class="navi_list">
-        <li>
-            <a href="index.html" i18n-content="首页"></a>
-        </li>
-        <li>
-            <a href="institution.html" i18n-content="区域机构"></a>
-        </li>
-        <li class="active">
-            <a href="resource.html" i18n-content="专业资源"></a>
-        </li>
-        <li>
-            <a href="service.html" i18n-content="服务内容"></a>
-        </li>
-        <li>
-            <a href="case.html" i18n-content="经典案例"></a>
-        </li>
-        <li>
-            <a href="news.html" i18n-content="新闻中心"></a>
-        </li>
-        <li>
-            <a href="contact.html" i18n-content="联系我们"></a>
-        </li>
-    </ul>
-    <div class="page_content">
-        <div class="content_container">
-            <div class="resource_container">
-                <div class="tab_group_container">
-                    <ul class="tab_group">
-                        <li class="tab_li active" data-type="1">
-                            <div class="tab_item">专业律师</div>
-                        </li>
-                        <li class="tab_li" data-type="0">
-                            <div class="tab_item">专家学者</div>
-                        </li>
-                        <!--<li class="tab_li">
-                           <div class="tab_item">行业权威</div>
-                       </li>
-                       <li class="tab_li">
-                           <div class="tab_item">关联机构</div>
-                       </li>-->
-                    </ul>
-                </div>
-                <div class="resource_content">
-                    <div class="resource_list_header">
-                        <span class="item_title">地区></span>
-                    </div>
-                    <div class="resource_content_list"></div>
-                    <div id="pagination" class="pagination"></div>
-                </div>
-            </div>
+  <ul class="navi_list">
+    <li>
+      <a href="index.html" i18n-content="首页"></a>
+    </li>
+    <li>
+      <a href="institution.html" i18n-content="区域机构"></a>
+    </li>
+    <li class="active">
+      <a href="resource.html" i18n-content="专业资源"></a>
+    </li>
+    <li>
+      <a href="service.html" i18n-content="服务内容"></a>
+    </li>
+    <li>
+      <a href="case.html" i18n-content="经典案例"></a>
+    </li>
+    <li>
+      <a href="news.html" i18n-content="新闻中心"></a>
+    </li>
+    <li>
+      <a href="contact.html" i18n-content="联系我们"></a>
+    </li>
+  </ul>
+  <div class="page_content">
+    <div class="content_container">
+      <div class="resource_container">
+        <div class="tab_group_container">
+          <ul class="tab_group">
+            <li class="tab_li active" data-type="1">
+              <div class="tab_item">专业律师</div>
+            </li>
+            <li class="tab_li" data-type="0">
+              <div class="tab_item">专家学者</div>
+            </li>
+            <!--<li class="tab_li">
+               <div class="tab_item">行业权威</div>
+           </li>
+           <li class="tab_li">
+               <div class="tab_item">关联机构</div>
+           </li>-->
+          </ul>
         </div>
+        <div class="resource_content">
+          <div class="city_container">
+            <span class="city_container_header">地区></span>
+            <div class="city_list"></div>
+          </div>
+          <div class="resource_content_list"></div>
+          <div id="pagination" class="pagination"></div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <footer class="page_footer">
-    <div class="copyright">
-        <div class="license">
-            <p>Copyright © 2017-2017 嘉法邦版权所有</p>
-            <p>京ICP证030173号 | 京公网安备11000002000001号</p>
-        </div>
-        <div class="mobile">
-            <p>服务电话：400-6969-085</p>
-        </div>
+  <div class="copyright">
+    <div class="license">
+      <p>Copyright © 2017-2017 嘉法邦版权所有</p>
+      <p>京ICP证030173号 | 京公网安备13040526号</p>
     </div>
+    <div class="mobile">
+      <img src="${require('../assets/img/phone.png')}" class="phone_icon" alt="">
+      <p>服务电话：400-6969-085</p>
+    </div>
+  </div>
 </footer>
 </body>
 </html>

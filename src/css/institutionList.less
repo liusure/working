@@ -22,6 +22,17 @@
         height: 3em;
         line-height: 3em;
         cursor: pointer;
+        position: relative;
+      }
+      .city_item.active:after {
+        content: '';
+        width: 2em;
+        display: inline-block;
+        border-bottom: 2px solid @base_blue;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 0;
       }
     }
   }

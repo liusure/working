@@ -12,12 +12,21 @@ $(function () {
     },
   })
 
+  $(".i18n_toggle").each((i, e) => {
+    e.classList.remove("active");
+    if (window.localStorage.jfblocale && e.dataset.loc === window.localStorage.jfblocale) {
+      e.classList.add("active");
+    }
+  })
 
   $('.i18n_toggle').on('click', (e) => {
     let loc = e.currentTarget.dataset.loc;
     window.localStorage.jfblocale = loc;
     di18n.setLocale(loc, function () {
-      // 回调函数
+      $(".i18n_toggle").each((i, e) => {
+        e.classList.remove("active")
+      })
+      e.currentTarget.classList.add("active");
     })
   })
 })

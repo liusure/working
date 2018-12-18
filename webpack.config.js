@@ -51,63 +51,87 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      title: "首页",
       template: "./src/page/index.html",
       chunks: ["i18n", "header", "index"],
+      favicon: "favicon.png"
     }),
     new HtmlWebpackPlugin({
+      title: "区域机构",
       filename: "institution.html",
       template: "./src/page/institution.html",
-      chunks: ["i18n", "header", "institution"]
+      chunks: ["i18n", "header", "institution"],
+      favicon: "favicon.png"
     }),
     new HtmlWebpackPlugin({
+      title: "服务内容",
       filename: "service.html",
       template: "./src/page/service.html",
-      chunks: ["i18n", "header", "service"]
+      chunks: ["i18n", "header", "service"],
+      favicon: "favicon.png"
     }),
     new HtmlWebpackPlugin({
+      title: "专业资源",
       filename: "resource.html",
       template: "./src/page/resource.html",
-      chunks: ["i18n", "header", "resource"]
+      chunks: ["i18n", "header", "resource"],
+      favicon: "favicon.png"
     }),
     new HtmlWebpackPlugin({
+      title: "经典案例",
       filename: "case.html",
       template: "./src/page/case.html",
-      chunks: ["i18n", "header", "case"]
+      chunks: ["i18n", "header", "case"],
+      favicon: "favicon.png"
     }),
     new HtmlWebpackPlugin({
+      title: "新闻中心",
       filename: "news.html",
       template: "./src/page/news.html",
-      chunks: ["i18n", "header", "news"]
+      chunks: ["i18n", "header", "news"],
+      favicon: "favicon.png"
     }),
     new HtmlWebpackPlugin({
+      title: "联系我们",
       filename: "contact.html",
       template: "./src/page/contact.html",
-      chunks: ["i18n", "header", "contact"]
+      chunks: ["i18n", "header", "contact"],
+      favicon: "favicon.png"
     }),
     new HtmlWebpackPlugin({
+      title: "新闻中心",
       filename: "newsDetail.html",
       template: "./src/page/newsDetail.html",
-      chunks: ["i18n", "header", "newsDetail"]
+      chunks: ["i18n", "header", "newsDetail"],
+      favicon: "favicon.png"
     }),
     new HtmlWebpackPlugin({
+      title: "经典案例",
       filename: "caseDetail.html",
       template: "./src/page/caseDetail.html",
-      chunks: ["i18n", "header", "caseDetail"]
+      chunks: ["i18n", "header", "caseDetail"],
+      favicon: "favicon.png"
     }),
     new HtmlWebpackPlugin({
+      title: "区域机构",
       filename: "institutionList.html",
       template: "./src/page/institutionList.html",
-      chunks: ["i18n", "header", "institutionList"]
+      chunks: ["i18n", "header", "institutionList"],
+      favicon: "favicon.png"
     }),
     new HtmlWebpackPlugin({
+      title: "区域机构",
       filename: "institutionDetail.html",
       template: "./src/page/institutionDetail.html",
-      chunks: ["i18n", "header", "institutionDetail"]
+      chunks: ["i18n", "header", "institutionDetail"],
+      favicon: "favicon.png"
     }),
     new HtmlWebpackPlugin({
+      title: "专业资源",
       filename: "lawyerDetail.html",
       template: "./src/page/lawyerDetail.html",
-      chunks: ["i18n", "header", "lawyerDetail"]
+      chunks: ["i18n", "header", "lawyerDetail"],
+      favicon: "favicon.png"
     }),
     new MiniCssExtractPlugin({
       filename: "static/css/[name].css",
