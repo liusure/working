@@ -14,8 +14,7 @@ export default {
     'casedetail': 'http://jfb.zledong.com/cms/api/ajax/casedetail'
 }
 
-/*
-export default {
+/*export default {
     'main': 'http://localhost:9000/cms/api/ajax/main',
     'citys': 'http://localhost:9000/cms/api/ajax/citys',
     'depart': 'http://localhost:9000/cms/api/ajax/depart',

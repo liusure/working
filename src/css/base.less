@@ -64,16 +64,42 @@ ul {
       }
     }
   }
-  .i18n_container {
-    z-index: 999;
-    position: absolute;
-    top: 3em;
-    right: 5em;
-    .i18n_toggle {
-      cursor: pointer;
-      width: 3em;
-      text-align: center;
-      display: inline-block;
+  .page_header {
+    width: 1330px;
+    max-width: 100%;
+    position: relative;
+    margin: 0 auto;
+    .i18n_container {
+      z-index: 999;
+      position: absolute;
+      top: 3em;
+      right: 0;
+      .i18n_toggle {
+        cursor: pointer;
+        width: 3em;
+        text-align: center;
+        display: inline-block;
+        font-size: @content_size;
+        margin: 1em 0;
+      }
+      .inner_work_zone {
+        color: @base_blue;
+        text-align: center;
+        font-size: @content_size;
+      }
+    }
+    .logo_container {
+      z-index: 999;
+      position: absolute;
+      top: 3em;
+      left: 0;
+      width: 268px;
+      height: 63px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
     }
   }
 }

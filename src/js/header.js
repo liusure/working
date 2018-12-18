@@ -5,8 +5,8 @@ import di18n from './i18n'
 
 $(function () {
   var mySwiper = new swiper('.swiper-container', {
-/*    loop: true,
-    autoplay: true,*/
+    loop: true,
+    autoplay: true,
     pagination: {
       el: '.swiper-pagination'
     },
