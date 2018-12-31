@@ -1,113 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-<div class="swiper-container">
-  <div class="page_header">
-    <div class="logo_container">
-      <img src="${require('../assets/img/logo.png')}">
-    </div>
-    <div class="i18n_container">
-      <div><span class="i18n_toggle" data-loc="en">EN</span>|<span class="i18n_toggle" data-loc="zh">中文</span></div>
-      <!--<div class="inner_work_zone">内部工作区</div>-->
-    </div>
-  </div>
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <div class="swiper-item">
-        <img src="${ require('../assets/img/1.jpg') }" alt="">
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="swiper-item"><img src="${ require('../assets/img/2.jpg') }" alt=""></div>
-    </div>
-    <div class="swiper-slide">
-      <div class="swiper-item"><img src="${ require('../assets/img/3.jpg') }" alt=""></div>
-    </div>
-  </div>
-  <!-- 分页器 -->
-  <div class="swiper-pagination"></div>
-</div>
-<div id="content">
-  <ul class="navi_list">
-    <li class="active">
-      <a href="index.html" i18n-content="首页"></a>
-    </li>
-    <li>
-      <a href="institution.html" i18n-content="区域机构"></a>
-    </li>
-    <li>
-      <a href="resource.html" i18n-content="专业资源"></a>
-    </li>
-    <li>
-      <a href="service.html" i18n-content="服务内容"></a>
-    </li>
-    <li>
-      <a href="case.html" i18n-content="经典案例"></a>
-    </li>
-    <li>
-      <a href="news.html" i18n-content="新闻中心"></a>
-    </li>
-    <li>
-      <a href="contact.html" i18n-content="联系我们"></a>
-    </li>
-  </ul>
-  <div class="page_content">
-    <div class="content_container">
-      <div class="intro">
-        <ul class="intro_nav_list"></ul>
-        <div class="intro_content_container"></div>
-        <div class="know_more_container">
-          <img src="${require('../assets/img/hammer.jpg')}" alt="">
-          <a href="javascript:void(0)" class="know_more_cube_btn intro_know_more" i18n-content="了解更多>"></a>
+<div class="page_header_padding">
+    <div class="view_content padding_content">
+        <div class="i18n_container">
+            <span class="i18n_toggle" data-loc="zh">简体中文.</span> <span class="i18n_toggle" data-loc="en">EN.</span>
+            <!--<div class="inner_work_zone">内部工作区</div>-->
         </div>
-      </div>
-      <div class="show_list_container">
-        <div class="show_title under_line" i18n-content="加盟律师"></div>
+    </div>
+</div>
+<div class="page_header">
+    <div class="view_content logo_container">
+        <img class="logo_img" src="${require('../assets/img/logo.png')}"><span class="s_text">提供最具法律服务价值的律师联合机构</span>
+    </div>
+</div>
+<div class="navi_list_container">
+    <ul class="navi_list">
+        <li class="active">
+            <a href="index.html" i18n-content="首页"></a>
+        </li>
+        <li>
+            <a href="institution.html" i18n-content="区域机构"></a>
+        </li>
+        <li>
+            <a href="resource.html" i18n-content="专业资源"></a>
+        </li>
+        <li>
+            <a href="service.html" i18n-content="服务内容"></a>
+        </li>
+        <li>
+            <a href="case.html" i18n-content="经典案例"></a>
+        </li>
+        <li>
+            <a href="news.html" i18n-content="新闻中心"></a>
+        </li>
+        <li>
+            <a href="contact.html" i18n-content="联系我们"></a>
+        </li>
+    </ul>
+</div>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="swiper-item">
+                <img src="${ require('../assets/img/1.jpg') }" alt="">
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-item"><img src="${ require('../assets/img/2.jpg') }" alt=""></div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-item"><img src="${ require('../assets/img/3.jpg') }" alt=""></div>
+        </div>
+    </div>
+    <!-- 分页器 -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<div class="intro ">
+    <div class="view_content">
+        <ul class="intro_nav_list"></ul>
+        <div class="intro_content_border">
+            <div class="intro_content_container"></div>
+            <div class="know_more_container">
+                <a href="javascript:void(0)" class="know_more_cube_btn intro_know_more" i18n-content="了解更多>"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="show_list_container">
+    <div class="view_content">
+        <div class="show_title between_line" i18n-content="加盟律师"></div>
         <ul class="show_list"></ul>
         <div class="show_list_bottom know_more_cube_btn_container">
-          <a href="resource.html" class="know_more_cube_btn" i18n-content="查看全部>"></a>
+            <a href="resource.html" class="know_more_cube_btn" i18n-content="查看全部>"></a>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 
 <div class="classic_case">
-  <div class="classic_case_banner">
-    <div class="case_content_title under_line" i18n-content="经典案例"></div>
-    <img class="classic_case_banner_img" src="${require('../assets/img/case.jpg')}" alt="">
-  </div>
-  <div class="classic_case_content"></div>
-  <div class="classic_case_bottom know_more_cube_btn_container">
-    <a href="case.html" class="know_more_cube_btn" i18n-content="查看全部>"></a>
-  </div>
+    <div class="view_content">
+        <div class="classic_case_banner">
+            <div class="case_content_title between_line" i18n-content="经典案例"></div>
+        </div>
+        <div class="classic_case_content"></div>
+        <div class="classic_case_bottom know_more_cube_btn_container">
+            <a href="case.html" class="know_more_cube_btn" i18n-content="查看全部>"></a>
+        </div>
+    </div>
 </div>
-<div class="news">
-  <div class="news_content_title under_line" i18n-content="新闻内容"></div>
-  <div class="news_content"></div>
-  <div class="news_bottom know_more_cube_btn_container">
-    <a href="news.html" class="know_more_cube_btn" i18n-content="查看全部>"></a>
-  </div>
+<div class="news view_content">
+    <div class="view_content">
+        <div class="news_content_title between_line" i18n-content="新闻内容"></div>
+        <div class="news_content"></div>
+        <div class="news_bottom know_more_cube_btn_container">
+            <a href="news.html" class="know_more_cube_btn" i18n-content="查看全部>"></a>
+        </div>
+    </div>
 </div>
 <div class="partner">
-  <div class="partner_title under_line" i18n-content="合作伙伴"></div>
-  <div class="partner_list"></div>
+    <div class="view_content">
+        <div class="partner_title between_line" i18n-content="合作伙伴"></div>
+        <div class="partner_list"></div>
+    </div>
 </div>
 <footer class="page_footer">
-  <div class="copyright">
-    <div class="license">
-      <p>Copyright © 2017-2017 嘉法邦版权所有</p>
-      <p>京ICP证030173号 | 京公网安备13040526号</p>
+    <div class="copyright">
+        <div class="license">
+            <p>Copyright © 2017-2017 嘉法邦版权所有</p>
+            <p>京ICP证030173号 | 京公网安备13040526号</p>
+        </div>
+        <div class="mobile">
+            <img src="${require('../assets/img/phone.png')}" class="phone_icon" alt="">
+            <p>服务电话：400-6969-085</p>
+        </div>
     </div>
-    <div class="mobile">
-      <img src="${require('../assets/img/phone.png')}" class="phone_icon" alt="">
-      <p>服务电话：400-6969-085</p>
-    </div>
-  </div>
 </footer>
 </body>
 </html>

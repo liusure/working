@@ -6,17 +6,22 @@
     .tab_group_container {
       .tab_group {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         .tab_li {
           cursor: pointer;
           .tab_item {
+            font-weight: bold;
+            padding: 20px 27px;
+            cursor: pointer;
+            flex: 0 0 4em;
             font-size: @biggest_tab_size;
           }
         }
         .tab_li.active {
-          color: @base_blue;
-          border-bottom: 2px solid @base_blue;
+          .tab_item{
+            border-bottom: 5px solid @base_orange;
+          }
         }
       }
     }

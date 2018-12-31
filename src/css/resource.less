@@ -3,19 +3,13 @@
 .resource_container {
   width: 100%;
   .city_container_header {
-    font-size: @biggest_tab_size;
-    color: #FFF;
-    width: 6em;
-    background-color: @base_blue;
     text-align: center;
-    display: block;
   }
   .city_list {
+    display: inline-block;
     background-color: #FFF;
-    width: 100%;
-    margin-bottom: 50px;
     .city_item {
-      width: 20%;
+      min-width: 90px;
       text-align: center;
       display: inline-block;
       height: 3em;
@@ -23,16 +17,19 @@
       cursor: pointer;
       position: relative;
     }
-    .city_item.active:after {
-      content: '';
-      width: 2em;
-      display: inline-block;
-      border-bottom: 2px solid @base_blue;
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%);
-      bottom: 0;
+    .city_item.active {
+      color: @base_orange;
     }
+    /*    .city_item.active:after {
+          content: '';
+          width: 2em;
+          display: inline-block;
+          border-bottom: 2px solid @base_orange;
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%);
+          bottom: 0;
+        }*/
   }
   .tab_group_container {
     .tab_group {
@@ -40,32 +37,39 @@
       justify-content: space-around;
       align-items: center;
       .tab_li {
+        cursor: pointer;
         .tab_item {
-          font-size: @biggest_tab_size;
           font-weight: bold;
+          padding: 20px 27px;
           cursor: pointer;
+          flex: 0 0 4em;
+          font-size: @biggest_tab_size;
         }
       }
       .tab_li.active {
-        color: @base_blue;
-        border-bottom: 2px solid @base_blue;
+        .tab_item {
+          border-bottom: 5px solid @base_orange;
+        }
       }
     }
   }
   .resource_content {
     margin-top: 100px;
+    border: solid 1px @base_orange;
+    padding: 60px 20px;
     .resource_list_header {
       .item_title {
         font-size: @biggest_tab_size;
         color: #FFF;
         width: 6em;
-        background-color: @base_blue;
+        background-color: @base_orange;
         text-align: center;
         display: block;
       }
-      border-bottom: 2px solid @base_blue;
+      border-bottom: 2px solid @base_orange;
     }
     .resource_content_list {
+      padding: 0 40px;
       .list_item {
         display: flex;
         justify-content: space-between;
