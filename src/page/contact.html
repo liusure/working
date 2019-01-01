@@ -15,12 +15,12 @@
 </div>
 <div class="page_header">
   <div class="view_content logo_container">
-    <img class="logo_img" src="${require('../assets/img/logo.png')}"><span class="s_text">提供最具法律服务价值的律师联合机构</span>
+    <img class="logo_img" src="${require('../assets/img/logo.png')}"><span i18n-content="s_text" class="s_text"></span>
   </div>
 </div>
 <div class="navi_list_container">
   <ul class="navi_list">
-    <li class="active">
+    <li>
       <a href="index.html" i18n-content="首页"></a>
     </li>
     <li>
@@ -38,27 +38,16 @@
     <li>
       <a href="news.html" i18n-content="新闻中心"></a>
     </li>
-    <li>
+    <li class="active">
       <a href="contact.html" i18n-content="联系我们"></a>
     </li>
   </ul>
 </div>
-<div class="swiper-container">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <div class="swiper-item">
-        <img src="${ require('../assets/img/1.jpg') }" alt="">
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="swiper-item"><img src="${ require('../assets/img/2.jpg') }" alt=""></div>
-    </div>
-    <div class="swiper-slide">
-      <div class="swiper-item"><img src="${ require('../assets/img/3.jpg') }" alt=""></div>
-    </div>
+<div class="content_header">
+  <div class="content_header_item">
+    <img src="${ require('../assets/img/1.jpg') }" class="content_header_img" alt="">
+    <span class="path_name">联系我们</span>
   </div>
-  <!-- 分页器 -->
-  <div class="swiper-pagination"></div>
 </div>
 <div id="content">
   <div class="page_content">

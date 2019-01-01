@@ -23,9 +23,9 @@
       box-sizing:border-box;
     }
     .area_name.active{
-      color: red;
+      color: @base_orange;
     }
-    .area_name::before {
+    .area_name:before {
       content: ' ';
       width: 11px;
       height: 11px;
@@ -34,6 +34,9 @@
       background-color: #999999;
       font-size: @content_size;
       border-radius: 50%;
+    }
+    .area_name.active:before{
+      background-color: @base_orange;
     }
   }
 }

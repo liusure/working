@@ -203,6 +203,7 @@ ul {
       width: 100%;
       height: 500px;
       object-fit: none;
+      filter: brightness(50%);
     }
     .path_name{
       font-size: 37px;
@@ -231,11 +232,10 @@ ul {
   position: relative;
   z-index: 10;
   .page_content {
-    padding: 0px 30px;
+    padding: 30px 30px 40px;
     .content_container {
       padding: 40px 30px;
-      display: flex;
-      flex-wrap: wrap;
+      box-sizing: border-box;
     }
   }
 }
