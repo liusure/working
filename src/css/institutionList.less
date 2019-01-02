@@ -4,19 +4,13 @@
   .city_container {
     width: 100%;
     .city_container_header {
-      font-size: @biggest_tab_size;
-      color: #FFF;
-      width: 6em;
-      background-color: @base_orange;
-      text-align: center;
-      display: block;
     }
     .city_list{
+      display: inline-block;
       background-color: #FFF;
-      width: 100%;
       margin-bottom: 50px;
       .city_item{
-        width: 20%;
+        min-width: 90px;
         text-align: center;
         display: inline-block;
         height: 3em;
@@ -24,16 +18,19 @@
         cursor: pointer;
         position: relative;
       }
-      .city_item.active:after {
-        content: '';
-        width: 2em;
-        display: inline-block;
-        border-bottom: 2px solid @base_orange;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-        bottom: 0;
+      .city_item.active {
+        color: @base_orange;
       }
+      /*      .city_item.active:after {
+              content: '';
+              width: 2em;
+              display: inline-block;
+              border-bottom: 2px solid @base_orange;
+              position: absolute;
+              left: 50%;
+              transform: translate(-50%);
+              bottom: 0;
+            }*/
     }
   }
   .institution_list_container{

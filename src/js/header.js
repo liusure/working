@@ -14,6 +14,9 @@ $(function () {
 
   $(".i18n_toggle").each((i, e) => {
     e.classList.remove("active");
+    if (!window.localStorage.jfblocale) {
+      window.localStorage.jfblocale = "zh";
+    }
     if (window.localStorage.jfblocale && e.dataset.loc === window.localStorage.jfblocale) {
       e.classList.add("active");
     }

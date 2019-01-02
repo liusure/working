@@ -7,15 +7,14 @@
 <body>
 <div class="page_header_padding">
   <div class="view_content padding_content">
+    <div class="logo_container">
+      <img class="logo_img" src="${require('../assets/img/logo.png')}">
+      <!--<span i18n-content="s_text" class="s_text"></span>-->
+    </div>
     <div class="i18n_container">
-      <span class="i18n_toggle" data-loc="zh">简体中文.</span> <span class="i18n_toggle" data-loc="en">EN.</span>
+      <span class="i18n_toggle active" data-loc="zh">简体中文.</span> <span class="i18n_toggle" data-loc="en">EN.</span>
       <!--<div class="inner_work_zone">内部工作区</div>-->
     </div>
-  </div>
-</div>
-<div class="page_header">
-  <div class="view_content logo_container">
-    <img class="logo_img" src="${require('../assets/img/logo.png')}"><span i18n-content="s_text" class="s_text"></span>
   </div>
 </div>
 <div class="navi_list_container">
@@ -88,7 +87,7 @@
       <p>京ICP证030173号 | 京公网安备13040526号</p>
     </div>
     <div class="mobile">
-      <img src="${require('../assets/img/phone.png')}" class="phone_icon" alt="">
+      <object data="${require('../assets/img/phone_icon.svg')}" type="image/svg+xml" class="phone_icon"></object>
       <p>服务电话：400-6969-085</p>
     </div>
   </div>
