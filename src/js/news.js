@@ -23,6 +23,7 @@ $(function () {
 function pageRender(data) {
     let items = data.items;
     let content_container = $('.content_container');
+  let i = 0;
     _.forEach(items, (item) => {
         let date = new moment(item.updateTime).format('DD');
         let month = new moment(item.updateTime).format('MMMM').substring(0,3);
@@ -48,5 +49,9 @@ function pageRender(data) {
             </div>
         `)
         content_container.append(ele);
+      i++;
+      if (i % 2 === 0) {
+        content_container.append($("<p class='gap'></p>"));
+      }
     })
 }

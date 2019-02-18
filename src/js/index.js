@@ -44,7 +44,7 @@ function pageRender(data) {
                 intro_content_container.append($(`<div class="intro_content ${key} ${active}"><div>${companyinfoItem[key]}</div></div>`))
             }
             if (active) {
-                if ($('.intro_content.active>div').height() > 200) {
+              if ($('.intro_content.active>div').height() > 272) {
                     intro_know_more.show();
                 } else {
                     intro_know_more.hide();
@@ -66,7 +66,7 @@ function pageRender(data) {
         });
         let content = document.querySelector('.intro_content.' + li.dataset.target)
         content.classList.add('active');
-        if ($(content).find('div').height() > 200) {
+      if ($(content).find('div').height() > 272) {
             intro_know_more.show();
         } else {
             intro_know_more.hide();
