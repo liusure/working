@@ -1,4 +1,4 @@
-export default {
+/*export default {
     'main': 'http://jfb.zledong.com/cms/api/ajax/main',
     'citys': 'http://jfb.zledong.com/cms/api/ajax/citys',
     'depart': 'http://jfb.zledong.com/cms/api/ajax/depart',
@@ -12,9 +12,8 @@ export default {
     'casecate': 'http://jfb.zledong.com/cms/api/ajax/casecate',
     'cases': 'http://jfb.zledong.com/cms/api/ajax/cases',
     'casedetail': 'http://jfb.zledong.com/cms/api/ajax/casedetail'
-}
+}*/
 
-/*
 export default {
   'main': 'http://localhost:9000/cms/api/ajax/main',
   'citys': 'http://localhost:9000/cms/api/ajax/citys',
@@ -30,4 +29,3 @@ export default {
   'cases': 'http://localhost:9000/cms/api/ajax/cases',
   'casedetail': 'http://localhost:9000/cms/api/ajax/casedetail'
 }
-*/
